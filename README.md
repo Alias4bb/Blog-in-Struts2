@@ -14,7 +14,7 @@
 ![](http://7xlphz.com1.z0.glb.clouddn.com/3.jpg)
 
 ##评论模块
-采取了流行了[多说](http://duoshuo.com)模块
+采取了流行的[多说](http://duoshuo.com)模块
 ##后台
 登录
 ![](http://7xlphz.com1.z0.glb.clouddn.com/4.jpg)
