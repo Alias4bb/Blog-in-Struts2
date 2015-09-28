@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+  <package name="default" namespace="/" extends="struts-default">
+    <action name="Posts"    class="com.myhomepage.action.PostsAction">
+         <result>/posts.jsp</result>
+       
+     </action>
+     <action name="Categories"    class="com.myhomepage.action.CategoriesAction">
+         <result>/categories.jsp</result>
+         
+     </action>
+    <action name="Archives"    class="com.myhomepage.action.ArchivesAction">
+         <result>/archives.jsp</result>
+         
+     </action>
+     <action name="Tags"   method="tags"  class="com.myhomepage.action.TagsAction">
+         <result>/tags.jsp</result>
+         
+     </action>
+      <action name="Tag"   class="com.myhomepage.action.TagsAction">
+         <result>/tagcloud.jsp</result>
+         
+     </action>
+  </package>
+  <package name="logout" namespace="/admin" extends="struts-default,json-default">
+   <action name="Login" method="login"   class="com.myhomepage.action.LoginAction">
+         <result>/admin/index.jsp</result>
+         <result name="error">/admin/login.jsp</result>
+     </action>
+   <action name="excuteAjax" method="excuteAjax"   class="com.myhomepage.action.LoginAction">
+        <result  type="json"><param name="root">result</param></result>
+     </action>
+     <action name="LogOut" class="com.myhomepage.action.LogOutAction">
+       <result>/admin/login.jsp</result>
+       </action>
+       
+     <action name="Update" class="com.myhomepage.action.UpdateAction">
+       <result>/admin/index.jsp</result>
+     </action>
+     <action name="Upload"  class="com.myhomepage.action.UploadAction">
+       <result>/admin/index.jsp</result>
+     </action>
+     <action name="Write_Post"  class="com.myhomepage.action.Write_PostAction">
+       <result>/admin/posts.jsp</result>
+     </action>
+     <action name="TagAdd" method="add" class="com.myhomepage.action.TagAddAction">
+       <result>/admin/tags.jsp</result>
+     </action>
+      <action name="DeleteUser"  class="com.myhomepage.action.DeleteUserAction">
+       <result>/admin/users.jsp</result>
+     </action>
+     <action name="DeleteCate"  class="com.myhomepage.action.DeleteCateAction">
+       <result>/admin/categories.jsp</result>
+     </action>
+     <action name="DeletePost"  class="com.myhomepage.action.DeletePostAction">
+       <result>/admin/posts.jsp</result>
+     </action>
+     <action name="EditPost"  class="com.myhomepage.action.EditPostAction">
+       <result>/admin/EditPost.jsp</result>
+     </action>
+     <action name="CateAdd"  class="com.myhomepage.action.CateAddAction">
+       <result>/admin/categories.jsp</result>
+     </action>
+     <action name="UserAdd"  class="com.myhomepage.action.UserAddAction">
+       <result>/admin/users.jsp</result>
+       </action>
+     <action name="Edit_Post"  class="com.myhomepage.action.Edit_PostAction">
+       <result>/admin/posts.jsp</result>
+     </action>
+  </package>
+  <constant name="struts.devMode" value="true" />
+<!--   调试模式 -->
+  <constant name="struts.action.extention" value=""></constant>
+  <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+</struts>    

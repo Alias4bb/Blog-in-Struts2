@@ -1,0 +1,30 @@
+body {
+   background-color: rgb(33,33,33);
+   background-image:url('1.jpg');
+   background-size: cover;
+    color:#ccc;
+    font: 12px/1.5 Arial, 'Droid Sans', 'Hiragino Sans GB','Microsoft YaHei';
+   backgrond-attachment:fixed;background-position:center;position:relative;
+}
+.content{
+	z-index: 1000;
+	position: absolute;
+	top:20%;
+	left :52%;
+	margin: 0 0 0 -190px;
+
+}.login{
+	margin-left: auto;
+	margin-right: auto;
+	width: 350px;
+	text-align: center;
+	background-color: rgba(50,50,50,0.6);
+	padding: 60px 40px;
+	position: relative;
+}.label3{
+	float: left;
+}.label2{
+	float: right;
+}.return{
+	float: right;
+}
